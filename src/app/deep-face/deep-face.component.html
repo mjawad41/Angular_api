@@ -1,0 +1,9 @@
+
+
+<input type="file" (change)="onFileSelected($event)" />
+<button (click)="processImage()">Process Image</button>
+
+<h1>Processed Image</h1>
+<div *ngFor="let image of Images">
+    <img style="width: 250px; height: 350px;" [src]="'data:image/jpeg;base64,' + image">
+  </div>
